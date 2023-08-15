@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Car;
+use App\Models\Availability;
 
 
 
@@ -86,17 +87,21 @@ class AdminController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function availability(Request $request)
     {
-        //
+        $data = new availability;
+
+        $data->name=$request->name;
+        $data->model=$request->model;
+        $data->make=$request->make;
+        $data->yom=$request->yom;
+        $data->price=$request->price;
+        $data->save();
+        return redirect()->back();
     }
 
     /**

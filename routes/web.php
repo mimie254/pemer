@@ -39,6 +39,7 @@ Route::get('/updateview/{id}',[AdminController::class,'updateview']);
 Route::post('/update/{id}',[AdminController::class,'update']);
 Route::get('/carlist',[AdminController::class,'carlist']);
 Route::post('/uploadcar',[AdminController::class,'upload']);
+Route::post('/availability',[AdminController::class,'availability']);
 Route::get('/deleteusers/{id}',[AdminController::class,'deleteusers']);
 
 

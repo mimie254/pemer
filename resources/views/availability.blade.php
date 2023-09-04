@@ -32,24 +32,34 @@
                         @csrf
                         <div class="row">
                             <div class="col-lg-12">
-                                <h4>Car Search</h4>
+                                <h4>Get In Touch</h4>
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Vehicle Name" >
+                                    <input name="name" type="text" id="name" placeholder="Your Name" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <fieldset>
-                                    <input name="make" type="text" id="make" placeholder="Make" >
+                                    <input name="email" type="text" id="email" placeholder="Your Email" required="">
                                 </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                    <input name="phone_number" type="number" id="phone_number" placeholder="Your Phone Number" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                    <input name="message" type="text" id="message" placeholder="Message" required="">
+                                </fieldset>
+                            </div>
+                            <!--div class="col-lg-6 col-sm-12">
                                 <fieldset>
                                     Select year of manufacture 1-2024
                                     <input name="yom"  id="YOM" type ="number" placeholder="YOM" >
                                 </fieldset>
-                            </div>
+                            </--div>
                             <div class="col-md-6 col-sm-12">
                                 <fieldset>
 
@@ -60,10 +70,10 @@
                                 <fieldset>
                                     <input name="price" type="number" id="price" placeholder="Max Price" required="">
                                 </fieldset>
-                            </div>
+                            </div-->
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="main-button-icon">Search</button>
+                                    <button type="submit" id="form-submit" class="main-button-icon">Send Message</button>
                                 </fieldset>
                             </div>
                         </div>

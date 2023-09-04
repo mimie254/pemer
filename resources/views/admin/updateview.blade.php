@@ -32,10 +32,12 @@
 
             @csrf
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="Title"    value="{{$data->Title}}">
+                <label> Title</label>
+                <input style="color: whitesmoke" type="text" class="form-control" name="title"    value="{{$data->title}}">
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="price" value="{{$data->price}}">
+                <label> Price</label>
+                <input style="color: whitesmoke" type="text" class="form-control" name="price" value="{{$data->price}}">
             </div>
             <div class="input-group mb-3">
                 <label> old image</label>
@@ -44,10 +46,11 @@
             </div>
             <div class="input-group mb-3">
                 <label> new image</label>
-                <input type="file" class="form-control" name="image"  value="{{$data->image}}">
+                <input style="color: whitesmoke" type="file" class="form-control" name="image"  value="{{$data->image}}">
             </div>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" name="description"  value="{{$data->description}}">
+                <label> Description</label>
+                <input style="color: whitesmoke" type="text" class="form-control" name="description"  value="{{$data->description}}">
             </div>
             <div class="col-8">
                 <button type="submit" class="btn btn-primary btn-block">Update CarList</button>

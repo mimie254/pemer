@@ -34,13 +34,20 @@ Route::middleware([
 });
 Route::get('/',[HomeController::class,'index']);
 Route::get('/users',[AdminController::class,'users']);
+Route::get('/deleteusers/{id}',[AdminController::class,'deleteusers']);
 Route::get('/deletecar/{id}',[AdminController::class,'deletecar']);
 Route::get('/updateview/{id}',[AdminController::class,'updateview']);
 Route::post('/update/{id}',[AdminController::class,'update']);
 Route::get('/carlist',[AdminController::class,'carlist']);
 Route::post('/uploadcar',[AdminController::class,'upload']);
 Route::post('/availability',[AdminController::class,'availability']);
-Route::get('/deleteusers/{id}',[AdminController::class,'deleteusers']);
+Route::get('/viewavailability',[AdminController::class,'viewavailability']);
+Route::get('/viewteam',[AdminController::class,'viewteam']);
+Route::post('/uploadteam',[AdminController::class,'uploadteam']);
+Route::get('/updateteam/{id}',[AdminController::class,'updateteam']);
+Route::post('/updateteammember/{id}',[AdminController::class,'updateteammember']);
+Route::get('/deleteteam/{id}',[AdminController::class,'deleteteam']);
+Route::get('/search',[AdminController::class,'search']);
 
 
 

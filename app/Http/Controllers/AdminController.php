@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Car;
 use App\Models\Availability;
+use App\Models\Team;
 
 
 
@@ -55,11 +56,10 @@ class AdminController extends Controller
             $data->image = $imagename;
         }
 
-        $data->Title = $request->Title;
+        $data->title = $request->title;
         $data->price = $request->price;
         $data->description = $request->description;
         $data->save();
-
         return redirect()->back();
     }
 
@@ -77,7 +77,7 @@ class AdminController extends Controller
       $imagename =time().'.'.$image->getClientOriginalExtension();
       $request->image->move('carimage', $imagename);
       $data->image=$imagename;
-      $data->Title=$request->Title;
+      $data->title=$request->title;
       $data->price=$request->price;
       $data->description=$request->description;
       $data->save();
@@ -96,10 +96,9 @@ class AdminController extends Controller
         $data = new availability;
 
         $data->name=$request->name;
-        $data->model=$request->model;
-        $data->make=$request->make;
-        $data->yom=$request->yom;
-        $data->price=$request->price;
+        $data->email=$request->email;
+        $data->phone_number=$request->phone_number;
+        $data->message=$request->message;
         $data->save();
         return redirect()->back();
     }
@@ -107,28 +106,76 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function viewavailability()
     {
-        //
+       $data =availability::all();
+        return view('admin.availability', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function viewteam()
     {
-        //
+
+        $data=team::all();
+        return view('admin.team', compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    public function uploadteam(Request $request)
     {
-        //
+        $data = new team;
+        $image=$request->image;
+        $imagename =time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('teamimage', $imagename);
+        $data->image=$imagename;
+
+
+        $data->name=$request->name;
+        $data->position=$request->position;
+        $data->save();
+        return redirect()->back();
+    }
+    public function updateteam($id)
+    {
+        $data=team::find($id);
+        return view('admin.updateteam', compact('data'));
+    }
+    public function updateteammember(Request $request, $id)
+    {
+        $data=team::find($id);
+
+        if (!$data) {
+            // Handle the case where the car data with the given ID was not found
+            // For example, you might want to redirect back with an error message.
+            return redirect()->back()->with('error', 'Car not found.');
+        }
+
+        $image = $request->file('image');
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $image->move('teamimage', $imagename);
+            $data->image = $imagename;
+        }
+
+        $data->name=$request->name;
+        $data->position=$request->position;
+        $data->save();
+        return redirect()->back();
+    }
+    public function deleteteam($id)
+    {
+        $data=team::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+    public function search(Request $request){
+
+        $search=$request->search;
+        $data=car::where('title','like','%'.$search.'%')->orWhere('price','like','%'.$search.'%')->orWhere('description','like','%'.$search.'%')->get();
+        return view('cars',compact('data'));
+
     }
 }

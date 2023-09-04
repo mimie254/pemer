@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <title>Klassy Cafe - Restaurant HTML Template</title>
     <!--
@@ -87,33 +89,37 @@
 
                             @if (Route::has('login'))
                                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                                    @auth
-                                       <li>
-                                           <x-app-layout>
+                        @auth
+                            <li>
+                                <x-app-layout>
 
-                                           </x-app-layout>
-                                       </li>
-                                    @else
-                                        <li>
-                                            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-                                        </li>
+                                </x-app-layout>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ route('login') }}"
+                                   class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
+                                    in</a>
+                            </li>
 
-                                        @if (Route::has('register'))
-                                            <li><a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a></li>
-                                        @endif
-                                    @endauth
-                                </div>
-                            @endif
-                            </a>
-                        </li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span></span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+                            @if (Route::has('register'))
+                                <li><a href="{{ route('register') }}"
+                                       class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                                </li>
+                @endif
+                @endauth
             </div>
+            @endif
+            </a>
+            </li>
+            </ul>
+            <a class='menu-trigger'>
+                <span></span>
+            </a>
+            <!-- ***** Menu End ***** -->
+            </nav>
         </div>
+    </div>
     </div>
 </header>
 <!-- ***** Header Area End ***** -->
@@ -175,7 +181,12 @@
                         <h6>About Us</h6>
                         <h2>We Leave A Delicious Memory For You</h2>
                     </div>
-                    <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                    <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank"
+                                                         rel="sponsored">restaurant HTML templates</a> with Bootstrap
+                        v4.5.2 CSS framework. You can download and feel free to use this website template layout for
+                        your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You
+                        are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please
+                        contact us for more information.</p>
                     <div class="row">
                         <div class="col-4">
                             <img src="assets/images/about-thumb-01.jpg" alt="">
@@ -207,75 +218,11 @@
 <!-- ***** Menu Area Ends ***** -->
 
 <!-- ***** Chefs Area Starts ***** -->
-<section class="section" id="chefs">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 offset-lg-4 text-center">
-                <div class="section-heading">
-                    <h6>Our Chefs</h6>
-                    <h2>We offer the best ingredients for you</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                        <img src="assets/images/chefs-01.jpg" alt="Chef #1">
-                    </div>
-                    <div class="down-content">
-                        <h4>Randy Walker</h4>
-                        <span>Pastry Chef</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                        <img src="assets/images/chefs-02.jpg" alt="Chef #2">
-                    </div>
-                    <div class="down-content">
-                        <h4>David Martin</h4>
-                        <span>Cookie Chef</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                        <img src="assets/images/chefs-03.jpg" alt="Chef #3">
-                    </div>
-                    <div class="down-content">
-                        <h4>Peter Perkson</h4>
-                        <span>Pancake Chef</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('team')
 <!-- ***** Chefs Area Ends ***** -->
 
 <!-- ***** Reservation Us Area Starts ***** -->
-@include('admin.availability')
+@include('availability')
 <!-- ***** Reservation Area Ends ***** -->
 
 <!-- ***** Menu Area Starts ***** -->
@@ -297,9 +244,12 @@
                             <div class="row">
                                 <div class="col-lg-6 offset-lg-3">
                                     <ul>
-                                        <li><a href='#tabs-1'><img src="assets/images/tab-icon-01.png" alt="">Breakfast</a></li>
-                                        <li><a href='#tabs-2'><img src="assets/images/tab-icon-02.png" alt="">Lunch</a></li>
-                                        <li><a href='#tabs-3'><img src="assets/images/tab-icon-03.png" alt="">Dinner</a></li>
+                                        <li><a href='#tabs-1'><img src="assets/images/tab-icon-01.png" alt="">Breakfast</a>
+                                        </li>
+                                        <li><a href='#tabs-2'><img src="assets/images/tab-icon-02.png" alt="">Lunch</a>
+                                        </li>
+                                        <li><a href='#tabs-3'><img src="assets/images/tab-icon-03.png" alt="">Dinner</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -316,7 +266,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-01.png" alt="">
                                                         <h4>Fresh Chicken Salad</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$10.50</h6>
                                                         </div>
@@ -326,7 +277,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-02.png" alt="">
                                                         <h4>Orange Juice</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$8.50</h6>
                                                         </div>
@@ -336,7 +288,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-03.png" alt="">
                                                         <h4>Fruit Salad</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$9.90</h6>
                                                         </div>
@@ -352,7 +305,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-04.png" alt="">
                                                         <h4>Eggs Omelette</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$6.50</h6>
                                                         </div>
@@ -362,7 +316,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-05.png" alt="">
                                                         <h4>Dollma Pire</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$5.00</h6>
                                                         </div>
@@ -372,7 +327,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-06.png" alt="">
                                                         <h4>Omelette & Cheese</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$4.10</h6>
                                                         </div>
@@ -392,7 +348,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-04.png" alt="">
                                                         <h4>Eggs Omelette</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$14</h6>
                                                         </div>
@@ -402,7 +359,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-05.png" alt="">
                                                         <h4>Dollma Pire</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$18</h6>
                                                         </div>
@@ -412,7 +370,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-06.png" alt="">
                                                         <h4>Omelette & Cheese</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$22</h6>
                                                         </div>
@@ -428,7 +387,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-01.png" alt="">
                                                         <h4>Fresh Chicken Salad</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$10</h6>
                                                         </div>
@@ -438,7 +398,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-02.png" alt="">
                                                         <h4>Orange Juice</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$20</h6>
                                                         </div>
@@ -448,7 +409,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-03.png" alt="">
                                                         <h4>Fruit Salad</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$30</h6>
                                                         </div>
@@ -468,7 +430,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-05.png" alt="">
                                                         <h4>Eggs Omelette</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$14</h6>
                                                         </div>
@@ -478,7 +441,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-03.png" alt="">
                                                         <h4>Orange Juice</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$18</h6>
                                                         </div>
@@ -488,7 +452,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-02.png" alt="">
                                                         <h4>Fruit Salad</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$10</h6>
                                                         </div>
@@ -504,7 +469,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-06.png" alt="">
                                                         <h4>Fresh Chicken Salad</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$8.50</h6>
                                                         </div>
@@ -514,7 +480,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-01.png" alt="">
                                                         <h4>Dollma Pire</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$9</h6>
                                                         </div>
@@ -524,7 +491,8 @@
                                                     <div class="tab-item">
                                                         <img src="assets/images/tab-item-04.png" alt="">
                                                         <h4>Omelette & Cheese</h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit,
+                                                            sed do.</p>
                                                         <div class="price">
                                                             <h6>$11</h6>
                                                         </div>
@@ -597,14 +565,14 @@
 <script src="assets/js/custom.js"></script>
 <script>
 
-    $(function() {
+    $(function () {
         var selectedClass = "";
-        $("p").click(function(){
+        $("p").click(function () {
             selectedClass = $(this).attr("data-rel");
             $("#portfolio").fadeTo(50, 0.1);
-            $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-                $("."+selectedClass).fadeIn();
+            $("#portfolio div").not("." + selectedClass).fadeOut();
+            setTimeout(function () {
+                $("." + selectedClass).fadeIn();
                 $("#portfolio").fadeTo(50, 1);
             }, 500);
 

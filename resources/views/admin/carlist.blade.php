@@ -28,16 +28,16 @@
 
         @csrf
         <div class="input-group mb-3">
-            <input type="text" class="form-control" name="Title"  autofocus  placeholder="Title">
+            <input style="color: whitesmoke" type="text" class="form-control" name="title"  autofocus  placeholder="Car Name">
         </div>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" name="price" placeholder="Estimated Price">
+            <input style="color: whitesmoke" type="text" class="form-control" name="price" placeholder="Estimated Price">
         </div>
         <div class="input-group mb-3">
-            <input type="file" class="form-control" name="image"  placeholder="Image">
+            <input style="color: whitesmoke" type="file" class="form-control" name="image"  placeholder="Image">
         </div>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" name="description"  placeholder="Description">
+            <input style="color: whitesmoke" type="text" class="form-control" name="description"  placeholder="Description">
         </div>
         <div class="col-8">
             <button type="submit" class="btn btn-primary btn-block">Add Car</button>
@@ -57,7 +57,7 @@
             </tr>
             @foreach($data as $data)
                 <tr align="center">
-                    <td> {{$data->Title}}</td>
+                    <td> {{$data->title}}</td>
                     <td>{{$data->price}}</td>
                     <td>{{$data->description}}</td>
                     <td><img height="200px" width="200px" src="carimage/{{$data->image}}" ></td>

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <title>Pemer Auto Imports</title>
     <!--
 
     TemplateMo 558 Klassy Cafe
@@ -53,8 +53,8 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+                    <a href="{{url('/')}}" class="logo">
+                        <img src="assets/images/pemer-auto-motors.png" align="klassy cafe html template">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
@@ -74,15 +74,15 @@
                         -->
                         <li class="scroll-to-section"><a href="#menu">Menu</a></li>
                         <li class="scroll-to-section"><a href="#chefs">Chefs</a></li>
-                        <li class="submenu">
+                        <!--li class="submenu">
                             <a href="javascript:;">Features</a>
                             <ul>
                                 <li><a href="#">Features Page 1</a></li>
                                 <li><a href="#">Features Page 2</a></li>
                                 <li><a href="#">Features Page 3</a></li>
                                 <li><a href="#">Features Page 4</a></li>
-                            </ul>
-                        </li>
+                            </ul-->
+                        </--li>
                         <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                         <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
                         <li>
@@ -131,10 +131,10 @@
             <div class="col-lg-4">
                 <div class="left-content">
                     <div class="inner-content">
-                        <h4>KlassyCafe</h4>
-                        <h6>THE BEST EXPERIENCE</h6>
+                        <h4>Pemer Motors</h4>
+                        <h6>THE BEST IN CAR SALES</h6>
                         <div class="main-white-button scroll-to-section">
-                            <a href="#reservation">Make A Reservation</a>
+                            <a href="#reservation">Check our Stock</a>
                         </div>
                     </div>
                 </div>
@@ -528,14 +528,12 @@
             </div>
             <div class="col-lg-4">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                    <a href="{{url('/')}}"><img src="assets/images/pemer-auto-motors.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-4 col-xs-12">
                 <div class="left-text-content">
-                    <p>© Copyright Klassy Cafe Co.
-
-                        <br>Design: TemplateMo</p>
+                    <p>© Copyright Pemer Motors.</p>
                 </div>
             </div>
         </div>
